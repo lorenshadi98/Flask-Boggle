@@ -1,0 +1,22 @@
+{% extends "base.html" %} {% block title %} Boggle {% endblock %} {% block
+content %}
+<div>{{params}}</div>
+<table class="fancy-table">
+  {% for items in board%}
+  <tr>
+    {% for item in items %}
+    <td>{{ item }}</td>
+    {% endfor %}
+  </tr>
+  {% endfor %}
+</table>
+<form class="word-guess-form" id="word-form">
+  <div>
+    <label for="guess">Enter your word guess below:</label>
+  </div>
+  <div>
+    <input type="text" name="guess" id="guess" />
+  </div>
+  <input type="submit" value="submit" />
+</form>
+{% endblock %}

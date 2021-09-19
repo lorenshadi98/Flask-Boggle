@@ -1,0 +1,19 @@
+.word-guess-form {
+  padding: 10px;
+}
+
+/* <-------------- table related formatting --------------> */
+.fancy-table {
+  width: 50vw;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+table tr {
+  border: 1px solid black;
+  text-align: center;
+}
+table td {
+  padding: 0.5rem;
+  border: 1px solid black;
+}
