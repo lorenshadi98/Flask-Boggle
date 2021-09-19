@@ -9,6 +9,7 @@ class Boggle():
     def __init__(self):
 
         self.words = self.read_dict("words.txt")
+        # self.words_found = []
 
     def read_dict(self, dict_path):
         """Read and return all words in dictionary."""
@@ -31,16 +32,16 @@ class Boggle():
 
     def check_valid_word(self, board, word):
         """Check if a word is a valid word in the dictionary and/or the boggle board"""
-        print("word recieved is ", word)
         word_exists = word in self.words
         valid_word = self.find(board, word.upper())
 
         if word_exists and valid_word:
-            result = "ok"
+            result = "Correct!"
+            # self.handle_words_found(word)
         elif word_exists and not valid_word:
-            result = "not-on-board"
+            result = "Not on Board"
         else:
-            result = "not-word"
+            result = "Not a Word"
 
         return result
 
@@ -142,3 +143,8 @@ class Boggle():
         # We've tried every path from every starting square w/o luck.
 
         return False
+
+    # def handle_words_found(self, word):
+    #     self.words_found.append(word)
+    #     print("words found are", self.words_found)
+    #     return self.words_found
